@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sijing (SJ) Shao</title>
+<meta name="description" content="Sijing (SJ) Shao, Assistant Professor of Psychology at Florida International University. Quantitative methods for intensive longitudinal data; loneliness and social connection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4; --paper:#ffffff; --ink:#1e2326; --muted:#5d666b; --line:#e4dfd6;
+    --accent:#1f5f5b; --accent-soft:#e3efed; --warm:#b5653a; --warm-soft:#f6e9e0;
+    --serif:'Newsreader', Georgia, serif; --sans:'Instrument Sans', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65}
+  a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:var(--warm)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 28px}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:10;background:rgba(250,248,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);text-decoration:none}
+  nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;margin-left:22px;letter-spacing:.01em}
+  nav a:hover{color:var(--accent)}
+  @media (max-width:720px){ nav{display:none} }
+
+  /* hero */
+  .hero{padding:72px 0 56px;display:grid;grid-template-columns:1fr 220px;gap:56px;align-items:center}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.05;margin:0 0 6px;letter-spacing:-.01em}
+  .cn{font-family:var(--serif);font-size:22px;color:var(--muted);margin:0 0 22px}
+  .lede{font-family:var(--serif);font-size:21px;line-height:1.5;margin:0 0 26px;max-width:36em}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;font-size:14px;font-weight:500;padding:8px 15px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);text-decoration:none}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:#174b48;color:#fff}
+  .portrait{width:240px;height:290px;border-radius:120px 120px 14px 14px;object-fit:cover;object-position:50% 15%;border:1px solid var(--line);display:block}
+  .motto{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.2;color:var(--accent);margin:0 0 18px}
+  @media (max-width:720px){ .hero{grid-template-columns:1fr;gap:28px;padding:44px 0 36px} .portrait{order:-1;width:160px;height:195px} .motto{font-size:25px} h1{font-size:42px} }
+
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:500;font-size:32px;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 30px;max-width:40em}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.5fr 1fr;gap:48px}
+  .about p{margin:0 0 14px}
+  .facts{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;font-size:15px}
+  .facts h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:600}
+  .facts ul{list-style:none;padding:0;margin:0 0 18px}
+  .facts li{margin-bottom:6px}
+  .facts li span{display:block;color:var(--muted);font-size:13.5px}
+  @media (max-width:720px){ .about{grid-template-columns:1fr;gap:28px} }
+
+  /* research */
+  .themes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .theme{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .theme .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+  .theme.m .tag{background:var(--accent-soft);color:var(--accent)}
+  .theme.e .tag{background:var(--warm-soft);color:var(--warm)}
+  .theme h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:0 0 10px;line-height:1.25}
+  .theme p{margin:0 0 12px;color:#33393c}
+  .theme ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+  @media (max-width:720px){ .themes{grid-template-columns:1fr} }
+
+  /* publications */
+  .filters{display:flex;gap:8px;margin:16px 0 26px;flex-wrap:wrap}
+  .filters button{font-family:var(--sans);font-size:14px;font-weight:500;padding:7px 15px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--muted);cursor:pointer}
+  .filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .year{font-family:var(--serif);font-size:20px;color:var(--muted);margin:26px 0 10px}
+  .pub{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+  .pub:last-child{border-bottom:0}
+  .kind{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 0;align-self:start;text-align:center;border-radius:6px}
+  .kind.m{background:var(--accent-soft);color:var(--accent)}
+  .kind.e{background:var(--warm-soft);color:var(--warm)}
+  .pub .title{font-family:var(--serif);font-size:18.5px;line-height:1.35;margin:0 0 3px;font-weight:500}
+  .pub .authors{font-size:14.5px;color:var(--muted);margin:0}
+  .pub .authors b{color:var(--ink);font-weight:600}
+  .pub .venue{font-size:14.5px;margin:2px 0 0}
+  .pub .venue i{color:var(--ink)}
+  .pub .plinks a{font-size:13px;font-weight:500;margin-right:12px}
+  .note{font-size:13.5px;color:var(--muted);margin-top:16px}
+  @media (max-width:560px){ .pub{grid-template-columns:1fr;gap:6px} .kind{justify-self:start;padding:3px 10px} }
+
+  /* grants */
+  .grant{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:14px;display:grid;grid-template-columns:1fr auto;gap:6px 24px}
+  .grant h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:0;line-height:1.3}
+  .grant .role{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;align-self:start;white-space:nowrap}
+  .grant p{margin:0;font-size:14.5px;color:var(--muted);grid-column:1/-1}
+
+  /* teaching */
+  .courses{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .course{border-left:3px solid var(--accent);padding:4px 0 4px 16px}
+  .course .lvl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .course h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:4px 0 6px;line-height:1.3}
+  .course p{margin:0;font-size:14.5px;color:#33393c}
+  @media (max-width:720px){ .courses{grid-template-columns:1fr} }
+
+  /* contact */
+  .contact{max-width:40em}
+  .contact p{margin:0 0 10px}
+  .students{background:var(--warm-soft);border-radius:14px;padding:22px 24px}
+  .students h3{font-family:var(--serif);font-weight:500;font-size:20px;margin:0 0 8px}
+  .students p{font-size:15px;margin:0}
+  @media (max-width:720px){ .contact{grid-template-columns:1fr} }
+
+  footer{padding:30px 0 50px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">SJ Shao</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#grants">Funding</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Quantitative Psychology · FIU</p>
+      <h1>Sijing (SJ) Shao</h1>
+      <p class="cn">Assistant Professor of Psychology</p>
+      <p class="motto">Ask questions. Keep asking.</p>
+      <p class="lede">I develop statistical frameworks that open up new questions about how people change from moment to moment, and use them to study loneliness, social connection, and alcohol use in everyday life.</p>
+      <div class="links">
+        <a class="btn primary" href="#publications">Publications</a>
+        <a class="btn" href="cv.pdf">CV (PDF)</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=7KHuwVsAAAAJ&amp;hl=en">Google Scholar</a>
+      </div>
+    </div>
+    <img class="portrait" src="photo.jpg" alt="Sijing Shao on a sunrise hike above a valley of fog">
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <div>
+        <p>I am an Assistant Professor in the Department of Psychology at Florida International University, where I work in the quantitative psychology area.</p>
+        <p>What I value most in research is curiosity, asking questions and then asking the next one. Before graduate school I spent five years at Northwell Health working on clinical trials of alcohol treatment, where participants reported on their drinking every day. Those studies raised questions I could not answer with the models I knew, and that is a big part of why I went on to a Ph.D. in quantitative psychology. Much of my current work, from the alcohol projects to the loneliness studies I started during my postdoc at Cornell, still begins with a question that came up in a real study.</p>
+        <p>I work closely with researchers who study emotion, addiction, and mental health, often from the very start of a project. Together we think about what a study can ask, how to design it, and which model fits the theory. Sometimes this leads to a new way of framing the question altogether.</p>
+        <p>Outside of research, I like to rally on the tennis court just for fun, go hiking, read novels, and spend time with family and close friends.</p>
+      </div>
+      <aside class="facts">
+        <h3>Position</h3>
+        <ul>
+          <li>Assistant Professor of Psychology<span>Florida International University, 2025 to present</span></li>
+        </ul>
+        <h3>Training</h3>
+        <ul>
+          <li>Postdoctoral Associate<span>Cornell University, with Anthony D. Ong</span></li>
+          <li>Ph.D., Quantitative Psychology<span>University of Notre Dame, 2024</span></li>
+          <li>M.S., Mathematics<span>New York University, Courant Institute</span></li>
+          <li>B.S., Statistics and Mathematics<span>Iowa State University</span></li>
+        </ul>
+        <h3>Honors</h3>
+        <ul><li>Best Student Presentation (Duolingo Award)<span>International Meeting of the Psychometric Society, 2021</span></li>
+        <li>Outstanding Graduate Student Teaching Award<span>University of Notre Dame, 2022</span></li></ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p class="sub">Most of my methods work began with a question from a real study, and I bring those methods back to substantive questions about loneliness and drinking.</p>
+    <div class="themes">
+      <div class="theme m">
+        <span class="tag">Methods</span>
+        <h3>New frameworks for studying change in daily life</h3>
+        <p>Data collected many times a day let us ask when, how often, and for how long, not only who. I develop models that make these questions testable, and I work with substantive researchers from the start so the design and the analysis fit the theory.</p>
+        <ul>
+          <li>Separating whether something happens from how much it happens (zero inflation)</li>
+          <li>How emotions carry over from one moment to the next</li>
+          <li>Planning studies with enough power for the effects that matter</li>
+          <li>Mediation and intervention effects over time</li>
+        </ul>
+      </div>
+      <div class="theme e">
+        <span class="tag">Empirical</span>
+        <h3>Loneliness and drinking in daily life</h3>
+        <p>Loneliness and drinking both rise and fall within a day. I study how lonely moments change the way people read social threat, when time alone helps rather than hurts, and what drives drinking and change during treatment.</p>
+        <ul>
+          <li>Loneliness and social threat detection</li>
+          <li>Solitude and well-being</li>
+          <li>Daily drinking, craving, and treatment</li>
+          <li>Emotion dynamics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="m" aria-pressed="false">Methods</button>
+      <button data-f="e" aria-pressed="false">Empirical</button>
+    </div>
+    <div id="pubs"></div>
+    <p class="note">For the full and current list, see <a href="https://scholar.google.com/citations?user=7KHuwVsAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+  </section>
+
+  <section id="grants">
+    <h2>Funding</h2>
+    <div class="grant">
+      <h3>The Timing of Social Connection: Examining Daily Social Engagement Patterns in Older Adults</h3>
+      <span class="role">Postdoctoral Researcher</span>
+      <p>Cornell Center for Social Sciences · PI: Anthony D. Ong · 2025 to 2026</p>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p class="sub">At FIU</p>
+    <div class="courses">
+      <div class="course">
+        <div class="lvl">Graduate</div>
+        <h3>PSY 5939 Longitudinal Data Analysis</h3>
+        <p>Fall 2025, Fall 2026. Growth models, intensive longitudinal designs, multilevel and dynamic models.</p>
+      </div>
+      <div class="course">
+        <div class="lvl">Undergraduate</div>
+        <h3>PSY 3215 Research Methods II</h3>
+        <p>Online section, Spring 2027.</p>
+      </div>    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div>
+        <p>sshao [at] fiu [dot] edu</p>
+        <p>Department of Psychology<br>Florida International University<br>AHC4 Room 423<br>11200 SW 8th Street, Miami, FL 33199</p>
+        <p>I'm always glad to talk with people who study change in daily life, especially early in a project when the questions are still taking shape.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sijing Shao · Last updated November 2026</div>
+</footer>
+
+<script>
+  // Edit publications here. kind: "m" = methods, "e" = empirical.
+  const ME = "Shao, S.";
+  const PUBS = [
+    {"year": 2026, "kind": "e", "title": "Loneliness modulates social threat detection in daily life", "authors": "Shao, S., Beck, E. D., Hawks, Z., Van Bogart, K., Graham, E. K., & Ong, A. D.", "venue": "Communications Psychology", "details": "4, 44", "links": {"DOI": "https://doi.org/10.1038/s44271-026-00410-1"}},
+    {"year": 2026, "kind": "m", "title": "Seven challenges in affective inertia research", "authors": "Shao, S., & Ong, A. D.", "venue": "Emotion", "details": "26(5), 1118–1132", "links": {"DOI": "https://doi.org/10.1037/emo0001630"}},
+    {"year": 2025, "kind": "m", "title": "Zero inflation in intensive longitudinal data: Why is it important and how should we deal with it?", "authors": "Shao, S., Xu, Z., Liu, Q., McClure, K., Jacobucci, R., Maxwell, S. E., & Zhang, Z.", "venue": "Psychological Methods", "details": "", "links": {}},
+    {"year": 2025, "kind": "m", "title": "Sample size planning and power analysis for detecting cross-lagged effects in longitudinal studies with ordinal outcomes", "authors": "Shao, S., Xu, Z., Qu, W., & Jacobucci, R.", "venue": "Fudan Journal of the Humanities and Social Sciences", "details": "18(4), 749–774", "links": {}},
+    {"year": 2023, "kind": "m", "title": "A comparison of mathematical and statistical modeling with longitudinal data: An application to ecological momentary assessment of behavior change in individuals with alcohol use disorder", "authors": "Shao, S., Canner, J., Everett, R. A., Bekele-Maxwell, K., Kuerbis, A., Stephenson, L., Menda, J., Morgenstern, J., & Banks, H. T.", "venue": "Bulletin of Mathematical Biology", "details": "", "links": {"DOI": "https://doi.org/10.1007/s11538-022-01097-1"}},
+    {"year": 2022, "kind": "m", "title": "A tutorial on Bayesian analysis of count data using JAGS", "authors": "Shao, S.", "venue": "Journal of Behavioral Data Science", "details": "", "links": {}},
+    {"year": 2022, "kind": "e", "title": "Examining momentary associations between behavioral approach system indices and nonsuicidal self-injury urges", "authors": "Burke, T., Shao, S., Jacobucci, R., Kautz, M., Alloy, L., & Ammerman, B.", "venue": "Journal of Affective Disorders", "details": "", "links": {}},
+    {"year": 2021, "kind": "e", "title": "An efficacy trial of adaptive interventions for alcohol use disorder", "authors": "Morgenstern, J., Kuerbis, A., Shao, S., Padovano, H. T., Levak, S., Vadhan, N. P., & Lynch, K. G.", "venue": "Journal of Substance Abuse Treatment", "details": "", "links": {}},
+    {"year": 2020, "kind": "e", "title": "Context and craving among problem drinkers attempting to moderate their drinking: Are all contexts created equal?", "authors": "Kuerbis, A., Shao, S., Treloar Padovano, H., Jadanova, A., Selva Kumar, D., Vitale, R., Nitzburg, G., Vadhan, N., & Morgenstern, J.", "venue": "Experimental and Clinical Psychopharmacology", "details": "", "links": {}},
+    {"year": 2019, "kind": "e", "title": "Examining motivational interviewing's effect on confidence and commitment using daily data", "authors": "Kuerbis, A., Lynch, K., Shao, S., & Morgenstern, J.", "venue": "Drug and Alcohol Dependence", "details": "", "links": {}},
+    {"year": 2018, "kind": "e", "title": "Comparing daily drivers of problem drinking among older and younger adults: An electronic daily diary study using smartphones", "authors": "Kuerbis, A., Treloar Padovano, H., Shao, S., Houser, J., Muench, F., & Morgenstern, J.", "venue": "Drug and Alcohol Dependence", "details": "183, 240–246", "links": {}},
+    {"year": 2018, "kind": "e", "title": "Exploration of treatment matching to problem drinker characteristics with motivational interviewing and non-directive client centered psychotherapy for problem drinkers", "authors": "Kuerbis, A., Houser, J., Levak, S., Shao, S., & Morgenstern, J.", "venue": "Journal of Substance Abuse Treatment", "details": "86, 9–16", "links": {}},
+    {"year": 2017, "kind": "m", "title": "Dynamic modeling of problem drinkers undergoing behavioral treatment", "authors": "Banks, H. T., Bekele-Maxwell, K., Everett, R. A., Stephenson, L., Shao, S., & Morgenstern, J.", "venue": "Bulletin of Mathematical Biology", "details": "79", "links": {}},
+    {"year": 2017, "kind": "m", "title": "Dynamical systems modeling to identify a cohort of problem drinkers with similar mechanisms of behavior change", "authors": "Bekele-Maxwell, K., Everett, R. A., Shao, S., Kuerbis, A., Stephenson, L., Banks, H. T., & Morgenstern, J.", "venue": "Journal for Person-Oriented Research", "details": "3(2), 100–118", "links": {}},
+    {"year": 2017, "kind": "e", "title": "Dismantling motivational interviewing: Effects on initiation of behavior change among problem drinkers seeking treatment", "authors": "Morgenstern, J., Kuerbis, A., Houser, J., Shao, S., & McKay, J.", "venue": "Psychology of Addictive Behaviors", "details": "31(7), 751–762", "links": {}},
+    {"year": 2017, "kind": "e", "title": "A randomized controlled pilot trial of different mobile messaging interventions for problem drinking", "authors": "Muench, F., van Stolk-Cooke, K., Kuerbis, A., Stadler, G., Baumel, A., Shao, S., McKay, J., & Morgenstern, J.", "venue": "PLOS ONE", "details": "12(2), e0167900", "links": {}},
+    {"year": 2017, "kind": "e", "title": "Testing cross-sectional and prospective mediators of internalized heterosexism on heavy drinking, alcohol problems, and psychological distress among heavy drinking men who have sex with men", "authors": "Kuerbis, A., Mereish, E., Hayes, M., Davis, C. M., Shao, S., & Morgenstern, J.", "venue": "Journal of Studies on Alcohol and Drugs", "details": "78(1), 113–123", "links": {}},
+    {"year": 2016, "kind": "e", "title": "Within-person associations between daily motivation and self-efficacy and drinking among problem drinkers in treatment", "authors": "Morgenstern, J., Kuerbis, A., Houser, J., Muench, F. J., Shao, S., & Treloar Padovano, H.", "venue": "Psychology of Addictive Behaviors", "details": "30(6), 630–638", "links": {}},
+    {"year": 2015, "kind": "e", "title": "The independent relationship between trouble controlling Facebook use, time spent on the site and distress", "authors": "Muench, F. M., Hayes, M., Kuerbis, A., & Shao, S.", "venue": "Journal of Behavioral Addictions", "details": "4(3), 163–169", "links": {}}
+  ];
+
+  function render(filter){
+    const el = document.getElementById("pubs");
+    const list = PUBS.filter(p => filter === "all" || p.kind === filter).sort((a,b) => b.year - a.year);
+    let html = "", lastYear = null;
+    for (const p of list){
+      if (p.year !== lastYear){ html += `<div class="year">${p.year}</div>`; lastYear = p.year; }
+      const authors = p.authors.replace(ME, `<b>${ME}</b>`);
+      const links = Object.entries(p.links).map(([k,v]) => `<a href="${v}">${k}</a>`).join("");
+      html += `<div class="pub">
+        <span class="kind ${p.kind}">${p.kind === "m" ? "Methods" : "Empirical"}</span>
+        <div>
+          <p class="title">${p.title}</p>
+          <p class="authors">${authors}</p>
+          <p class="venue"><i>${p.venue}</i>${p.details ? ", " + p.details : ""}</p>
+          ${links ? `<div class="plinks">${links}</div>` : ""}
+        </div></div>`;
+    }
+    el.innerHTML = html;
+  }
+  document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render(b.dataset.f);
+  }));
+  render("all");
+</script>
+</body>
+</html>
